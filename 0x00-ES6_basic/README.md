@@ -10,7 +10,6 @@ This directory contains projects related to ES6 (ECMAScript 2015) basics. Each t
 4. [Setup](#setup)
 5. [Usage](#usage)
 
-
 ## Task Descriptions
 
 - **Task 0: [0-constants.js](0-constants.js)** - Modify variable instantiation using const and let.
