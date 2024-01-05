@@ -1,33 +1,17 @@
-class Building {
+export default class Building {
   constructor(sqft) {
-    this._sqft = Building.validateNumberType(sqft, 'Sqft');
-    Building.checkForEvacuationMethodOverride();
+    this._sqft = sqft;
+
+    if (new.target !== Building && typeof this.evacuationWarningMessage !== 'function') {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
+    }
   }
 
-  // Getter for sqft
   get sqft() {
     return this._sqft;
   }
 
-  // Abstract method to be overridden by subclasses
-  static evacuationWarningMessage() {
-    throw new Error('Class extending Building must override evacuationWarningMessage');
-  }
-
-  // Validation method for number type
-  static validateNumberType(value, attribute) {
-    if (typeof value !== 'number' || Number.isNaN(value)) {
-      throw new TypeError(`${attribute} must be a valid number`);
-    }
-    return value;
-  }
-
-  // Check if evacuationWarningMessage is overridden
-  static checkForEvacuationMethodOverride() {
-    if (Building.evacuationWarningMessage === Building.prototype.evacuationWarningMessage) {
-      throw new Error('Class extending Building must override evacuationWarningMessage');
-    }
+  set sqft(value) {
+    this._sqft = value;
   }
 }
-
-export default Building;
