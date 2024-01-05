@@ -1,6 +1,6 @@
 # 0x02. ES6 classes
 
-This directory contains solutions for a series of tasks related to JavaScript adES6 classes.
+This directory contains solutions for a series of tasks related to JavaScript ES6 classes.
 
 ## Table of Contents
 
