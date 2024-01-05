@@ -4,11 +4,11 @@ This directory contains projects related to ES6 (ECMAScript 2015) basics. Each t
 
 ## Table of Contents
 
-1. [Task Descriptions](#task-descriptions)
-2. [Overview Concepts](#overview-concepts)
-3. [Requirements](#requirements)
-4. [Setup](#setup)
-5. [Usage](#usage)
+- [Task Descriptions](#task-descriptions)
+- [Overview Concepts](#overview-concepts)
+- [Requirements](#requirements)
+- [Setup](#setup)
+- [Usage](#usage)
 
 ## Task Descriptions
 
