@@ -61,3 +61,17 @@ const director1: Directors = createDirector({
 });
 
 console.log(director1);
+
+// Function to print teacher information
+const printTeacher = (firstName: string, lastName: string): string => {
+    return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Interface for the printTeacher function
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+// Example usage for printTeacher
+const teacherString: string = printTeacher("John", "Doe");
+console.log(teacherString);
