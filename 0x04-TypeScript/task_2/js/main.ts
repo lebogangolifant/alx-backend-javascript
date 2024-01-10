@@ -64,3 +64,18 @@ function executeWork(employee: Director | Teacher): string {
         return employee.workTeacherTasks();
     }
 }
+
+// String literal type named Subjects
+type Subjects = 'Math' | 'History';
+
+// Function teachClass
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else if (todayClass === 'History') {
+        return 'Teaching History';
+    } else {
+        // Handle other cases or throw an error if needed
+        throw new Error('Invalid subject');
+    }
+}
