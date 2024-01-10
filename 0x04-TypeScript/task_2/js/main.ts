@@ -1,5 +1,3 @@
-// main.ts
-
 // DirectorInterface with expected methods
 interface DirectorInterface {
     workFromHome(): string;
@@ -50,5 +48,19 @@ function createEmployee(salary: number | string): Director | Teacher {
         return new Teacher();
     } else {
         return new Director();
+    }
+}
+
+// Function isDirector as a type predicate
+function isDirector(employee: Director | Teacher): employee is Director {
+    return (employee as Director).workDirectorTasks !== undefined;
+}
+
+// Function executeWork
+function executeWork(employee: Director | Teacher): string {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
     }
 }
