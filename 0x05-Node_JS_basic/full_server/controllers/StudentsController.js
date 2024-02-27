@@ -3,12 +3,13 @@ import readDatabase from '../utils';
 class StudentsController {
   static async getAllStudents(req, res) {
     try {
-      const studentsByField = await readDatabase(process.argv[2]);
+      const databasePath = process.argv[2];
+      const studentsByField = await readDatabase(databasePath);
       const fields = Object.keys(studentsByField).sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
 
       const response = ['This is the list of our students'];
 
-      fields.forEach(field => {
+      fields.forEach((field) => {
         const students = studentsByField[field];
         const count = students.length;
         const firstNames = students.join(', ');
@@ -24,7 +25,8 @@ class StudentsController {
 
   static async getAllStudentsByMajor(req, res) {
     try {
-      const studentsByField = await readDatabase(process.argv[2]);
+      const databasePath = process.argv[2];
+      const studentsByField = await readDatabase(databasePath);
       const major = req.query.major.toUpperCase();
 
       if (major !== 'CS' && major !== 'SWE') {
@@ -43,6 +45,8 @@ class StudentsController {
       console.error(error);
       res.status(500).send('Cannot load the database');
     }
+
+    return null;
   }
 }
 
