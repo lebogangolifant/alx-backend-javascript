@@ -4,7 +4,7 @@
   "description": "How to use Mocha to write a test suite",
   "main": "0-calcul.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
