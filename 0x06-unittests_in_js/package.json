@@ -4,15 +4,20 @@
   "description": "How to use Mocha to write a test suite",
   "main": "0-calcul.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha.js"
   },
-  "author": "",
+  "author": "Lebogang Olifant",
   "license": "ISC",
   "devDependencies": {
     "chai": "^5.1.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
     "mocha": "^10.3.0",
-    "sinon": "^17.0.1"
+    "sinon": "^7.5.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lebogangolifant/alx-backend-javascript/blob/main/0x06-unittests_in_js"
   }
 }
