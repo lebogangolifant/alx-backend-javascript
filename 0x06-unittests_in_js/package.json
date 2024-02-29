@@ -1,11 +1,10 @@
 {
   "name": "0x06_unittests_in_js",
-  "type": "commonjs",
   "version": "1.0.0",
   "description": "How to use Mocha to write a test suite",
   "main": "0-calcul.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha.js"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "author": "Lebogang Olifant",
   "license": "ISC",
