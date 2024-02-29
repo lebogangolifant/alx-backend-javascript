@@ -1,5 +1,6 @@
 {
   "name": "0x06_unittests_in_js",
+  "type": "module",
   "version": "1.0.0",
   "description": "How to use Mocha to write a test suite",
   "main": "0-calcul.js",
