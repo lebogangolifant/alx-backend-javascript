@@ -1,6 +1,6 @@
 {
   "name": "0x06_unittests_in_js",
-  "type": "module",
+  "type": "commonjs",
   "version": "1.0.0",
   "description": "How to use Mocha to write a test suite",
   "main": "0-calcul.js",
@@ -16,7 +16,9 @@
     "mocha": "^10.3.0",
     "sinon": "^7.5.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "require": "^2.4.20"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lebogangolifant/alx-backend-javascript/blob/main/0x06-unittests_in_js"
