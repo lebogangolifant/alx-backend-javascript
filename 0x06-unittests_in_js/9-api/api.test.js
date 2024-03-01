@@ -27,6 +27,6 @@ describe('Cart page', () => {
       expect(response.statusCode).to.equal(404);
       done();
     });
-  };
+  });
 });
 
