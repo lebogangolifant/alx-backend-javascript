@@ -5,7 +5,7 @@ const PORT = 7865;
 
 app.param('id', (req, res, next, id) => {
   if (!/^\d+$/.test(id)) {
-    return res.status(400).send('Invalid ID. ID must be a number.');
+    return res.status(404).send('Invalid ID. ID must be a number.');
   }
   next();
 });
